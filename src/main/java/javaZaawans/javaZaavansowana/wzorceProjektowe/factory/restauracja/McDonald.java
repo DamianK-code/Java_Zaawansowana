@@ -1,4 +1,4 @@
-package javaZaawans.javaZaavansowana.wzorceProjektowe.restauracja;
+package javaZaawans.javaZaavansowana.wzorceProjektowe.factory.restauracja;
 
 import java.util.Arrays;
 
