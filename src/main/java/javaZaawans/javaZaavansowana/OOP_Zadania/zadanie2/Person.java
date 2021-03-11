@@ -2,8 +2,13 @@ package javaZaawans.javaZaavansowana.OOP_Zadania.zadanie2;
 
 public abstract class Person {
 
-    String name;
-    String address;
+    private String name;
+    private String address;
+
+    public Person() {
+        this.name = null;
+        this.address = null;
+    }
 
     public Person(String name, String address) {
         this.name = name;

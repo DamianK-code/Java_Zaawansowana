@@ -14,11 +14,11 @@ public class Main {
             polecenie = scanner.nextLine();
             String[] words = polecenie.split(" ");
             if (words.length >= 2) {
-                if (polecenie.toLowerCase().matches("wyjazd\s.*")) {
+                if (words[0].equalsIgnoreCase("wyjazd")) {
                     highway.vehicleLeave(words[1]);
-                } else if (polecenie.toLowerCase().matches("wjazd\s.*")) {
+                } else if (words[0].equalsIgnoreCase("wjazd")) {
                     highway.vehicleEntry(words[1], CarType.valueOf(words[2]));
-                } else if (polecenie.toLowerCase().matches("sprawdz\s.*")) {
+                } else if (words[0].equalsIgnoreCase("sprawdz")) {
                     highway.searchVehicle(words[1]);
                 }
             }

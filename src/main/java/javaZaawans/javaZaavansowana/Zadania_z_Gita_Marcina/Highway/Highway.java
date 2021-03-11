@@ -32,14 +32,14 @@ public class Highway {
         }
         LocalDateTime czasWjazdu = carTypeMap.get(registrationNumber).getEntryTime();
         LocalDateTime czasWyjazdu = LocalDateTime.now();
-        int czasNaAutostradzie = Duration.between(czasWjazdu, czasWyjazdu).getNano();
+        double czasNaAutostradzie = Duration.between(czasWjazdu, czasWyjazdu).getSeconds();
         CarType carType = carTypeMap.get(registrationNumber).getCarType();
 
         double oplata = 1;
         if (carType.equals(CarType.CAR)) {
-            oplata = czasNaAutostradzie * 0.0001;
+            oplata = czasNaAutostradzie * 1;
         } else if (carType.equals(CarType.TRUCK)) {
-            oplata = czasNaAutostradzie * 0.002;
+            oplata = czasNaAutostradzie * 2;
         }
         System.out.println("opłata wynosi: " + oplata);
         carTypeMap.remove(registrationNumber);

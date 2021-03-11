@@ -6,7 +6,7 @@ public class Lecturer extends Person {
     int wynagrodzenie;
 
 
-    public Lecturer(String name, String address,String specjalizacja, int wynagrodzenie) {
+    public Lecturer(String name, String address, String specjalizacja, int wynagrodzenie) {
         super(name, address);
         this.specjalizacja = specjalizacja;
         this.wynagrodzenie = wynagrodzenie;
@@ -36,11 +36,9 @@ public class Lecturer extends Person {
 
     @Override
     public String toString() {
-        return "Lecturer{" +
-                "specjalizacja='" + specjalizacja + '\'' +
-                ", wynagrodzenie=" + wynagrodzenie +
-                ", name='" + name + '\'' +
-                ", address='" + address + '\'' +
-                '}';
+        return "Lecturer{" + "name=" + getName() + '\'' +
+                ", address=" + getAddress() + '\'' +
+                ", specjalizacja=" + specjalizacja + '\'' +
+                ", wynagrodzenie=" + wynagrodzenie + '}';
     }
 }

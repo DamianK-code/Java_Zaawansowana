@@ -21,6 +21,12 @@ public class McDonald implements Restauracja {
                         .withSkladniki(Arrays.asList(Skladniki.PODWÓJNA_WOŁOWINA,Skladniki.CEBULA, Skladniki.BULKA, Skladniki.OGOREK, Skladniki.SER, Skladniki.SALATE,Skladniki.SOS_ARABSKI))
                         .stwórz();
             case CHEESE_BURGER:
+                return new Burger.Builder()
+                        .withBurgerTyp(BurgerTyp.CHEESE_BURGER)
+                        .withSkladniki(Arrays.asList(Skladniki.PODWÓJNY_SER,Skladniki.BULKA,Skladniki.OGOREK,Skladniki.SOS_MAJONEZOWY))
+                        .withWaga(Waga.G_300)
+                        .withCena(4.5)
+                        .stwórz();
             default:
                 System.out.println("Nie serwujemy takiego burgera");
                 throw new RuntimeException();
